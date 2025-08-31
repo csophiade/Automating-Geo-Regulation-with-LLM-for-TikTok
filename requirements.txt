@@ -1,0 +1,13 @@
+chromadb
+langchain
+openai
+pydantic
+pandas
+requests==2.32.2
+markitdown[all]
+llama-index==0.10.44 
+llama-index-core==0.10.44
+llama-index-embeddings-huggingface==0.2.2
+sentence-transformers
+transformers>=4.43
+torch
