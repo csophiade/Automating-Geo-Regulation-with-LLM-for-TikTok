@@ -54,50 +54,53 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 Build/refresh catalog
-
+```
+### Refresh Catalog
 Converts PDFs to Markdown, extracts rules, and updates directory.json:
+```bash 
 python -m tools.update_cat
-Rebuild RAG index (optional)
+```
+### Rebuild RAG index
+```bash 
 python rag/ingest.py
-Single feature classification
+```
+
+### Single feature classification
 python main.py "Feature name" "Feature description"
+```bash 
 python -m tools.update_cat
-Rebuild RAG index (optional)
-
+```
+### Rebuild RAG index (optional)
+```bash 
 python rag/ingest.py
-Single feature classification
+```
 
+### Single feature classification
+```bash 
 python main.py "Feature name" "Feature description"
-Batch classification
+```
 
+### Batch classification
+```bash 
 python evaluation/run_batch.py
-Stack
+```
+## Stack
 Frontend: Streamlit (demo UI)
-
 Backend: Python, LlamaIndex
-
 Models: HuggingFace (BAAI/bge embeddings, Qwen/Phi LLMs)
-
 Storage: FAISS/Chroma VectorDB, JSON catalog, CSV logs
-
 Tools: MarkItDown, Pydantic, pandas
 
-Future Work
-Broaden coverage with additional jurisdictions (e.g., Brazil LGPD, India DPDP Act)
+## Future Work
+- Broaden coverage with additional jurisdictions (e.g., Brazil LGPD, India DPDP Act)
+- Add flat global rule index for features with no jurisdiction specified
+- Detect overlap between features with similar compliance obligations
+- Experiment with BytePlus's seedream LLM for domain-specific classification
+- Integrate into CI/CD for automated compliance screening on new feature rollouts
 
-Add flat global rule index for features with no jurisdiction specified
-
-Detect overlap between features with similar compliance obligations
-
-Experiment with TikTok’s seedream LLM for domain-specific classification
-
-Integrate into CI/CD for automated compliance screening on new feature rollouts
-
-Outputs
+## Outputs
 files/main/directory.json — structured catalog of laws and rules
-
 rag_index/ — vector embeddings for retrieval
-
 data/outputs.csv — compliance decisions and audit trail
 
 
