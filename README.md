@@ -85,23 +85,23 @@ python main.py "Feature name" "Feature description"
 python evaluation/run_batch.py
 ```
 ## Stack
-Frontend: Streamlit (demo UI)
-Backend: Python, LlamaIndex
-Models: HuggingFace (BAAI/bge embeddings, Qwen/Phi LLMs)
-Storage: FAISS/Chroma VectorDB, JSON catalog, CSV logs
-Tools: MarkItDown, Pydantic, pandas
+Frontend: Streamlit (demo UI) <br>
+Backend: Python, LlamaIndex<br>
+Models: HuggingFace (BAAI/bge embeddings, Qwen/Phi LLMs)<br>
+Storage: FAISS/Chroma VectorDB, JSON catalog, CSV logs<br>
+Tools: MarkItDown, Pydantic, pandas<br>
 
 ## Future Work
-- Broaden coverage with additional jurisdictions (e.g., Brazil LGPD, India DPDP Act)
-- Add flat global rule index for features with no jurisdiction specified
+- Broaden coverage with additional jurisdictions (e.g., Brazil LGPD, India DPDP Act)\
+- Add flat global rule index for features with no jurisdiction specified\
 - Detect overlap between features with similar compliance obligations
 - Experiment with BytePlus's seedream LLM for domain-specific classification
 - Integrate into CI/CD for automated compliance screening on new feature rollouts
 
 ## Outputs
-files/main/directory.json — structured catalog of laws and rules
-rag_index/ — vector embeddings for retrieval
-data/outputs.csv — compliance decisions and audit trail
+files/main/directory.json — structured catalog of laws and rules<br>
+rag_index/ — vector embeddings for retrieval<br>
+data/outputs.csv — compliance decisions and audit trail<br>
 
 
 
